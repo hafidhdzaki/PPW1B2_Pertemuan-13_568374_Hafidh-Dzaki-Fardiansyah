@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Komunitas IT</title>
+</head>
+<body>
+
+    <div>
+        <img src="logo.png" alt="Logo Komunitas" width="150">
+        <h2>Pendaftaran Anggota Baru</h2>
+    </div>
+
+    <fieldset>
+        <legend>Data Identitas</legend>
+        
+        <form action="/proses.php" method="post">
+            
+            <label for="fname">Nama Lengkap:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="Ketik nama lengkap..." autofocus required><br><br>
+
+            <label for="reg_id">ID Registrasi:</label><br>
+            <input type="text" id="reg_id" name="reg_id" value="IT-2026-XYZ" readonly><br><br>
+
+            <label for="divisi">Pilih Divisi:</label><br>
+            <select id="divisi" name="divisi">
+                <option value="">-- Pilih Bidang --</option>
+                <optgroup label="Web">
+                    <option value="frontend">Front-End</option>
+                    <option value="backend">Back-End</option>
+                </optgroup>
+                <optgroup label="Mobile">
+                    <option value="android">Android</option>
+                    <option value="ios">iOS</option>
+                </optgroup>
+            </select><br><br>
+
+            <p>Status Mahasiswa:</p>
+            <input type="radio" id="aktif" name="status" value="Aktif">
+            <label for="aktif">Aktif</label><br>
+            <input type="radio" id="alumni" name="status" value="Alumni">
+            <label for="alumni">Alumni</label><br><br>
+
+            <label>Foto Kartu Mahasiswa:</label><br>
+            <img src="ktm.jpeg" alt="Preview KTM" width="200" border="1"><br>
+            <input type="file" name="foto_ktm"><br><br>
+
+            <label for="kota">Domisili (Saran):</label><br>
+            <input list="kota_list" name="kota" id="kota" placeholder="Cari kota...">
+            <datalist id="kota_list">
+                <option value="Yogyakarta">
+                <option value="Sleman">
+                <option value="Bantul">
+                <option value="Kulon Progo">
+            </datalist><br><br>
+
+            <label for="bio">Bio Singkat:</label><br>
+            <textarea id="bio" name="bio" rows="4" cols="40">Halo, saya mahasiswa TRPL...</textarea><br><br>
+
+            <label>Preview Grafik (Canvas):</label><br>
+            <canvas id="prevCanvas" width="200" height="50"></canvas><br><br>
+
+            <input type="submit" value="Daftar">
+            <input type="submit" formaction="/save_draft.php" value="Simpan Draft">
+
+        </form>
+    </fieldset>
+
+    <script>
+        var c = document.getElementById("prevCanvas");
+        var ctx = c.getContext("2d");
+        ctx.strokeText("Verified Member", 10, 30);
+    </script>
+
+</body>
+</html>

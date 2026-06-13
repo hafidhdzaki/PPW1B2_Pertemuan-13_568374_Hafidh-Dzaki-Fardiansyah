@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macam-macam Tag</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Data Penduduk</legend>
+
+        <h2>Hitung Perkiraan Warga</h2>
+        <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+            <label for="a">Jumlah Wanita:</label>
+            <input type="number" id="a" value="10"><br><br>
+
+            <label for="b">Jumlah Pria:</label>
+            <input type="number" id="b" value="20"><br><br>
+
+            Total: <output name="result" for="a b">30</output>
+        </form>
+
+        <label for="provinsi">Pilih Provinsi Anda:</label>
+        <select id="provinsi" name="provinsi">
+         <option value="">--Pilih Provinsi--</option>
+         <optgroup label="Sumatra">
+             <option value="aceh">Aceh</option>
+             <option value="sumut">Sumatera Utara</option>
+         </optgroup>
+         <optgroup label="Jawa">
+             <option value="jogja">Yogyakarta</option>
+             <option value="jateng">Jawa Tengah</option>
+         </optgroup>
+        </select>
+
+       <label for="kota">Dimana kota Anda:</label>
+       <input list="Kota" name="kota" id="kota" placeholder="Kota...">
+       <datalist id="Kota">
+        <option>Yogyakarta</option>
+        <option>Sabang</option>
+        <option>Langsa</option>
+        <option>Medan</option>
+        <option>Binjai</option>
+        <option>Sleman</option>
+        <option>Magelang</option>
+        <option>Solo</option>
+       </datalist>
+    </fieldset>
+</body>
+</html>
