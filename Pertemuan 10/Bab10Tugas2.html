@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2: Output JavaScript</title>
+    <script>
+        function tampilAlert(){
+            alert("Haiiii");
+        }
+    </script>
+</head>
+<body>
+    <h1>Tugas 2: Menampilkan Output JS</h1>
+    <p>Buka Console di Inspect Element atau lihat layar untuk melihat hasilnya.</p>
+    <button onclick="tampilAlert()">Klik Aku</button>
+
+    <div id="target-output">
+        </div>
+
+    <script>
+        console.log("Ini adalah salah satu penggunaan fungsi console.log()");
+
+        alert("Selamat datang di tugas 2 Bab 10");
+
+        document.write("<p>Ini paragraf baru hasil dari document.write()</p>");
+
+        var lihat = document.getElementById("target-output");
+        lihat.innerHTML = "<p>Ini adalah paragraf yang dibuat melalui innerHTML</p>";
+    </script>
+</body>
+</html>
