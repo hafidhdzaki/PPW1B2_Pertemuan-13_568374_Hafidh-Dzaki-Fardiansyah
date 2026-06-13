@@ -1,0 +1,110 @@
+:root {
+    --primary-blue: #1e3a8a;
+    --accent-blue: #3b82f6;
+    --bg-light: #f4f7fb;
+    --text-gray: #64748b;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-blue);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: var(--text-gray);
+    line-height: 1.7;
+}
+
+.text-accent { color: var(--accent-blue); }
+.bg-custom-light { background-color: var(--bg-light); }
+
+.btn-custom {
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+    transition: all 0.3s ease;
+}
+        
+.btn-custom:hover {
+    background-color: #2563eb; 
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+}
+
+.project-card {
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(30, 58, 138, 0.1);
+}
+
+.project-card img {
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05); 
+}
+
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--primary-blue) !important;
+}
+.nav-link {
+    font-weight: 500;
+    margin-left: 1rem;
+    color: var(--text-gray) !important;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: var(--accent-blue) !important;
+}
+
+.badge-skill {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--accent-blue);
+    font-weight: 600;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    transition: background-color 0.3s;
+}
+.badge-skill:hover {
+    background-color: var(--accent-blue);
+    color: white;
+}
+
+.img-hero-wrapper {
+    position: relative;
+    z-index: 1;
+}
+.img-hero-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(59, 130, 246, 0.1);
+    z-index: -1;
+}
