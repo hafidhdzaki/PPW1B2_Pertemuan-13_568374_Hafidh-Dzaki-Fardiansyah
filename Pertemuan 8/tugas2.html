@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Mahasiswa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card rounded-8">
+                    <header class="bg-primary text-white py-2 px-3 card-header">
+                        <h1 class="fs-4 mb-0">Form Pendaftaran Mahasiswa</h1>
+                    </header>
+                    <main class="p-4">
+                        <div class="alert alert-success alert-dismissible fade show d-none" id="pemberitahuan">
+                            <strong>Pendafaran Berhasil!</strong> Data mahasiswa baru telah tersimpan di sistem.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <form id="daftar">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="nlengkap" class="form-label">Nama Lengkap</label>
+                                    <input type="text" id="nlengkap" name="nlengkap" class="form-control is-valid" value="Jack" required>
+                                    <div class="valid-feedback">Format nama sesuai!</div>
+                                </div>
+                                <div class="col">
+                                    <label for="nim" class="form-label">NIM</label>
+                                    <input type="text" id="nim" name="nim" class="form-control is-invalid" required>
+                                    <div class="invalid-feedback">NIM tidak boleh kosong.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="emailk" class="form-label">Email Kampus</label>
+                                <input type="email" id="emailk" name="emailk" class="form-control" placeholder="nama@mail.ugm.ac.id">
+                            </div>
+                
+                            <div class="row mb-3">
+                                <div class="d-flex flex-column col-md-6">
+                                    <label for="prodi" class="form-label">Program Studi</label>
+                                    <select id="prodi" name="prodi" class="form-select">
+                                        <option selected disabled>Pilih Program Studi...</option>
+                                        <option value="TRPL">Teknologi Rekayasa Perangkat Lunak (TRPL)</option>
+                                        <option value="TRI">Teknologi Rekayasa Internet (TRI)</option>
+                                        <option value="TRIK">Teknologi Rekayasa Instrumentasi dan Kontrol (TRIK)</option>
+                                        <option value="TRE">Teknologi Rekayasa Elektro (TRE)</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col col-md-6">
+                                    <label for="semester" class="form-label">Semester</label>
+                                    <select id="semester" name="semester" class="form-select">
+                                        <option selected disabled>Pilih Semester</option>
+                                        <option value="sem1">Semester 1</option>
+                                        <option value="sem2">Semester 2</option>
+                                        <option value="sem3">Semester 3</option>
+                                        <option value="sem4">Semester 4</option>
+                                        <option value="sem5">Semester 5</option>
+                                        <option value="sem6">Semester 6</option>
+                                        <option value="sem7">Semester 7</option>
+                                        <option value="sem8">Semester 8</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex flex-column mb-3">
+                                <label for="alamat" class="form-label">Alamat Kos/Rumah</label>
+                                <textarea id="alamat" name="alamat" class="form-control" rows="3"></textarea>
+                            </div>
+                            
+                            <div class="d-flex flex-column mb-4">
+                                <label for="foto" class="form-label">Unggah Foto Profil (Mengenakan Korsa/Formal)</label>
+                                <input type="file" id="foto" name="foto" class="form-control">
+                            </div>
+                            
+                            <div class="d-flex flex-row gap-3">
+                                <button type="submit" class="btn btn-primary px-4 py-2">Simpan</button>
+                                <button type="reset" class="btn rounded border-1 px-4 py-2 text-secondary btn-outline-secondary">Reset</button>
+                            </div>
+                        </form>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const dataForm = document.getElementById('daftar');
+        const pengumuman = document.getElementById('pemberitahuan');
+
+        dataForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            pengumuman.classList.remove('d-none');
+        });
+    </script>
+</body>
+</html>
