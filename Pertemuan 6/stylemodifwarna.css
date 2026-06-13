@@ -1,0 +1,31 @@
+/* Desktop (≥ 1025px) */
+@media (min-width: 1025px) {
+    .inti {
+        background-color: white;
+        padding: 40px;
+    }
+}
+
+/* Laptop (769px - 1024px) */
+@media (max-width: 1024px) {
+    .inti {
+        background-color: lightgreen;
+        padding: 40px;
+    }
+}
+
+/* Tablet (481px - 768px) */
+@media (max-width: 768px) {
+    .inti {
+        background-color: lightblue;
+        padding: 40px;
+    }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+    .inti {
+        background-color: lightgray;
+        padding: 40px;
+    }
+}
