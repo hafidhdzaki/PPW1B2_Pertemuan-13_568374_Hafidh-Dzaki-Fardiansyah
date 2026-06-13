@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E9EDF1;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+header {
+    background-color: #E9EDF1;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.judul h1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.judul p {
+    margin-top: 5px;
+    padding-top: 0;
+    font-weight: 500;
+}
+
+nav {
+    background-color: #E9EDF1;
+    text-align: center;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+    word-spacing: 20px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    margin-top: 15px;
+}
+
+.beranda {
+    background: linear-gradient(45deg, #18595f, #c2d9d7, white);
+    text-align: center;
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.beranda h1 {
+    color: #255e6a;
+}
+
+#deskripsi {
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 25px;
+}
+
+#hubungi {
+    border-radius: 25px;
+    padding: 15px;
+    background: linear-gradient(45deg, #255e6a, #6f999f);
+    color: white;
+    border-style: none;
+    font-size: large;
+}
+
+button {
+    cursor: pointer;
+}
+
+.keahlian {
+    display: flex;
+    gap: 20px;
+}
+
+.softskill {
+    background-color: #E9EDF1;
+    padding: 20px;
+    padding-top: 5px;
+    margin-top: 10px;
+    flex: 70%;
+    border-radius: 10px;
+}
+
+.artikel {
+    display: flex;
+    margin-top: 0;
+}
+
+article {
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-width: 2px;
+    border-color: #ABAEB3;
+    border-style: solid;
+    border-radius: 10px;
+    flex: 1;
+    margin-top: 0;
+}
+
+article p {
+    font-size: small;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+article h3 {
+    margin-bottom: 5px;
+    padding-bottom: 0;
+}
+
+aside {
+    background-color: #E9EDF1;
+    padding: 20px;
+    padding-top: 5px;
+    margin-top: 10px;
+    flex: 30%;
+    border-radius: 10px;
+}
+
+aside ul li {
+    padding: 3px;
+}
+
+.note {
+    border-style: dotted;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #ABAEB3;
+    font-weight: 500;
+}
+
+.kontak {
+    background-color: #E9EDF1;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+#username, #email, #subjek {
+    margin-top: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+
+#kirim {
+    background-color: #0D5E75;
+    margin-top: 5px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    border-style: none;
+    font-size: medium;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.input {
+    display: flex;
+    gap: 10px;
+}
+
+.input div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input input {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 5px;
+    border-color: #ABAEB3;
+    border-style: solid;
+}
+
+footer {
+    background-color: #E9EDF1;
+    display: flex;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-size: small;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer div {
+    color: #0D5E75;
+    font-size: large;
+}
+
+footer div a {
+    padding-left: 5px;
+}
+
+@media (max-width: 1024px){
+    .keahlian {
+        flex-direction: column;
+    }
+
+    .skill-keras {
+        display: flex;
+        gap: 20px;
+    }
+    
+    aside h2 {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px){
+    .artikel {
+        flex-direction: column;
+    }
+
+    article {
+        display: flex;
+        gap: 10px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .input {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .input input {
+        margin-bottom: 0px;
+    }
+
+    .input div {
+        padding-bottom: 0;
+    }
+}

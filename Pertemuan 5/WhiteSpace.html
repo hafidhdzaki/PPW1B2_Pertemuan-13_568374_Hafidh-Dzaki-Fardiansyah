@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Perbandingan White-Space</title>
+    <style>
+        .kotak {
+            width: 250px;
+            border: 2px solid red;
+            background-color: #f0f0f0;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        .nowrap { white-space: nowrap; }
+        .pre { white-space: pre; }
+        .pre-wrap { white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+
+    <h2>Perbandingan White-Space</h2>
+
+    <p><b>1. nowrap (Mengabaikan Enter, Teks Terus ke Kanan)</b></p>
+    <div class="kotak nowrap">
+        Ini teks yang sangat panjang sekali dan tidak akan turun ke bawah meskipun kotaknya sempit.
+    </div>
+
+    <p><b>2. pre (Menjaga Enter & Spasi, Tapi Jebol Ke Kanan)</b></p>
+    <div class="kotak pre">
+Baris satu
+    Baris dua (ada spasi)
+Teks ini sangat panjang sekali sampai keluar kotak.
+    </div>
+
+    <p><b>3. pre-wrap (Menjaga Enter & Spasi, Tetap Rapi di Dalam Kotak)</b></p>
+    <div class="kotak pre-wrap">
+Baris satu
+    Baris dua (ada spasi)
+Teks ini sangat panjang sekali tapi dia otomatis turun saat mentok garis merah.
+    </div>
+
+</body>
+</html>
