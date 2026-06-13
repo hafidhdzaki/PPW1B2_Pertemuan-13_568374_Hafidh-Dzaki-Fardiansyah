@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superset</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            background-color: #000000;
+        }
+        
+        header {
+            position: sticky;
+            width: 100%;
+            z-index: 100;
+            top: 0;
+        }
+
+        .bungkus {
+            display: flex;
+            background-color: #000000;
+            color: white;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+
+        .bungkus h1 i {
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .navatas ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            font-weight: bold;
+        }
+
+        .navatas ul a {
+            text-decoration: none;
+        }
+        
+        .unpick {
+            padding: 10px;
+            color: #b0bec5;
+            cursor: pointer;
+        }
+
+        .unpick:hover {
+            color: #e53935;
+            transition: color 0.5s ease;
+        }
+
+        .pilih {
+            background-color: #e53935;
+            border-radius: 5px;
+            padding: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            cursor: pointer;
+        }
+
+        hr {
+            background-color: #e53935;
+            height: 2px;
+            border-style: none;
+        }
+
+        .cta {
+            display: flex;
+            padding: 70px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cta, .ajak, .ajak h1, .ajak p, .ajak button {
+            background-color: #131313;
+        }
+
+        .ajak {
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+            justify-content: center;
+        }
+
+        .ajak h1 {
+            font-size: 400%;
+        }
+
+        .ajak p {
+            color: #9e9e9e;
+            font-size: 120%;
+            width: 500px;
+            line-height: 35px;
+        }
+
+        .ajak a {
+            background-color: #131313;
+        }
+
+        .mulai {
+            border-style: none;
+            width: 200px;
+            cursor: pointer;
+        }
+        
+        .mulai h3 {
+            font-size: 140%;
+            padding: 10px;
+            border-radius: 5px;
+            border-style: none;
+            background-color: #e53935;
+            width: 225px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .mulai h3:hover {
+            background-color: #da221f;
+            transform: translateY(-2px);
+            transition: all 0.25s ease-in-out;
+        }
+
+        .mulai, .mulai h3 , .ajak p {
+            margin-top: 20px;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+        .reason {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 70px;
+            background-color: #0a0a0a;
+        }
+
+        .reason h2 {
+            font-size: 250%;
+            padding: 30px;
+            background-color: #0a0a0a;
+        }
+
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            background-color: #0a0a0a;
+            margin-top: 30px;
+        }
+        
+        .card1, .card2, .card3 {
+            background-color: #1a1a1a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            border-radius: 10px;
+            width: 300px;
+            border-style: solid;
+            border-color: #333333;
+            border-width: 1px;
+            transition: all 0.25s ease-out;
+        }
+
+        .card1:hover, .card2:hover, .card3:hover {
+            border-color: #e53935;
+            transform: translateY(-8px);
+            transition: all 0.25s ease;
+        }
+        
+        .card1 h1, .card2 h1, .card3 h1 {
+            background-color: #1a1a1a;
+            font-size: 350%;
+            padding: 10px;
+        }
+
+        .card1 h3, .card2 h3, .card3 h3 {
+            background-color: #1a1a1a;
+            padding: 20px;
+            font-size: 150%;
+        }
+        
+        .card1 p, .card2 p, .card3 p {
+            background-color: #1a1a1a;
+            color: #9e9e9e;
+            line-height: 30px;
+        }
+
+        main hr {
+            border-style: none;
+            height: 2px;
+            background-color: #222222;
+            margin: auto;
+            max-width: 1140px;
+        }
+
+        .AboutUs {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 90px;
+            padding-top: 50px;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .supersetgym, .navigasi, .kontak {
+            flex: 1;
+            min-width: 250px;
+            padding: 10px;
+            line-height: 30px;
+        }
+
+        .supersetgym h3, .navigasi h3, .kontak h3 {
+            margin: 10px;
+            letter-spacing: 2px;
+        }
+
+        .navigasi ul, .kontak ul{
+            list-style: none;
+            padding-left: 10px;
+        }
+        
+        .supersetgym p {
+            color: #9e9e9e;
+            padding-left: 10px;
+        }
+
+        .navigasi ul li, .kontak ul li {
+            color: #9e9e9e;
+            cursor: pointer;
+        }
+
+        .navigasi ul a {
+            text-decoration: none;
+        }
+
+        .navigasi ul li:hover {
+            color: #e53935;
+            transition: color 0.5s ease;
+        }
+
+        footer {
+            justify-items: center;
+            padding: 25px;
+        }
+        
+        footer p {
+            color: #555555;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                align-items: center;
+            }
+
+            .bungkus {
+                flex-direction: column;
+            }
+            
+            .cta {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .card, .AboutUs {
+                flex-direction: column;
+            }
+
+            .ajak p, .supersetgym, .navigasi, .kontak {
+                width: auto;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            hr {
+                width: auto;
+            }
+
+            .navatas ul {
+                flex-direction: column;
+            }
+
+            .card1, .card2, .card3 {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .reason {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="bungkus">
+            <h1><i>SUPER<span style="color: #e53935;">SET</span></i></h1>
+            <nav class="navatas">
+                <ul>
+                    <a href="#"><li class="unpick">FASILITAS</li></a>
+                    <a href="#"><li class="unpick">JADWAL</li></a>
+                    <a href="#"><li class="unpick">SUPLEMEN</li></a>
+                    <li class="pilih">JOIN MEMBER</li>
+                </ul>
+            </nav>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <section class="cta">
+            <div class="ajak">
+                <h1>PUSH LIMIT.</h1>
+                <h1>BREAK RECORD.</h1>
+                <p>Fasilitas angkat beban terlengkap. Bangun massa ototmu sekarang dengan peralatan standar profesional dan pelatih berpengalaman.</p>
+                <a href="#"><button type="submit" class="mulai"><h3>MULAI LATIHAN</h3></button></a>
+            </div>
+            <img src="Pull-up.jpg" width="550" height="400" alt="Pull-up">
+        </section>
+        <section class="reason">
+            <h2>KENAPA MEMILIH KAMI?</h2>
+            <section class="card">
+                <section class="card1">
+                    <h1>🏋️‍♂️</h1>
+                    <h3>FREE WEIGHT</h3>
+                    <p>Area dumbbell lengkap, bench press, hingga squat rack. Sempurna untuk eksekusi dumbbell row atau bulgarian split squat.</p>
+                </section>
+                <section class="card2">
+                    <h1>🏃‍♂️</h1>
+                    <h3>AREA KARDIO</h3>
+                    <p>Tingkatkan stamina dengan deretan treadmill, stairmaster, dan sepeda statis berteknologi tinggi.</p>
+                </section>
+                <section class="card3">
+                    <h1>⚡</h1>
+                    <h3>NUTRITION BAR</h3>
+                    <p>Isi ulang tenaga setelah latihan keras. Menyediakan whey protein, pre-workout, hingga creatine murni.</p>
+                </section>
+            </section>
+        </section>
+        <hr>
+        <section class="AboutUs">
+            <section class="supersetgym">
+                <h3>SUPERSET GYM</h3>
+                <p>Pusat kebugaran nomor satu dengan alat modern dan komunitas yang mendukung tujuan fisikmu.</p>
+            </section>
+            <section class="navigasi">
+                <h3>NAVIGASI</h3>
+                <ul>
+                    <a href="#"><li>Program Latihan</li></a>
+                    <a href="#"><li>Personal Trainer</li></a>
+                    <a href="#"><li>Toko Suplemen</li></a>
+                    <a href="#"><li>Karir</li></a>
+                </ul>
+            </section>
+            <section class="kontak">
+                <h3>KONTAK</h3>
+                <ul>
+                    <li>WhatsApp: 0812-2876-1927</li>
+                    <li>Instagram: @superset.id</li>
+                    <li>Lokasi: Turi, Sleman, DIY</li>
+                </ul>
+            </section>
+        </section>
+        <hr>
+    </main>
+    <footer>
+        <p>&copy; 2026 Superset Fitness. All rights reserved.</p>
+    </footer>
+</body>
+</html>

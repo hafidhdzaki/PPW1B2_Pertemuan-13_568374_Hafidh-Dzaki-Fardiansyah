@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        header, nav, main {
+            font-family: Arial, Helvetica, sans-serif;
+            justify-items: center;
+            text-align: center;
+        }
+
+        
+        header, nav {
+            background-color: #2c3e50;
+            color: white;
+            margin: 0px;
+            padding: 5px;
+        }
+        
+        nav {
+            background-color: #2c3e50;
+            margin-bottom: 25px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        main {
+            z-index: 1;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 25px rgb(179, 179, 179);
+            padding: 30px;
+            padding-bottom: 0;
+            margin-bottom: 25px;
+            position: relative;
+            width: 280px;
+            height: 350px;
+        }
+
+        .online {
+            background-color: #2ecc71;
+            border-radius: 25px;
+            padding: 10px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            color: white;
+            font-weight: 600;
+            width: fit-content;
+            font-size: smaller;
+            margin: 0;
+            position: absolute;
+            right: -5px;
+            top: -10px;
+        }
+
+        .profile1, .profile2, .profile3 {
+            top: 10px;
+        } 
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            cursor: pointer;
+        }
+
+        img {
+            border-radius: 50px;
+        }
+
+        h2 {
+            margin-bottom: 5px;
+        }
+
+        h5 {
+            margin-top: 0;
+            font-weight: 300;
+            margin-bottom: 0;
+            color: grey;
+        }
+
+        .deskripsi {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        .tombolatas {
+            position: fixed;
+            z-index: 100;
+            right: 10px;
+            bottom: 15px;
+        }
+        
+        .backtotop {
+            font-size: x-large;
+            font-weight: 800;
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            border-style: none;
+            box-shadow: 0px 0px 5px rgb(212, 212, 212);
+            background-color: rgb(182, 182, 182);
+            cursor: pointer;
+            color: white;
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="totop">
+        <h1>Biografi</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Beranda</li>
+            <li>Profil</li>
+            <li>Proyek</li>
+        </ul>
+    </nav>
+    <main>
+        <section class="profile1">
+            <p class="online">Online 🟢</p>
+            <img src="profil 1.png" width="100">
+            <h2>Otsuki Yamazaki</h2>
+            <h5>QA Engineer</h5>
+            <p class="deskripsi">Seorang QA Engineer yang teliti dan detail-oriented, dengan passion memastikan setiap produk berjalan mulus dan bebas dari bug sebelum sampai ke pengguna.</p>
+        </section>
+        <section class="profile2">
+            <p class="online">Online 🟢</p>
+            <img src="profil 2.png" width="100">
+            <h2>Priyanka Tripti</h2>
+            <h5>Project Manager</h5>
+            <p class="deskripsi">Project Manager yang terorganisir dan komunikatif, berfokus pada kolaborasi tim serta memastikan setiap proyek selesai tepat waktu dan sesuai tujuan.</p>
+        </section>
+        <section class="profile3">
+            <p class="online">Online 🟢</p>
+            <img src="profil 3.png" width="100">
+            <h2>Robert Jhonson</h2>
+            <h5>Developer</h5>
+            <p class="deskripsi">Developer yang kreatif dan problem-solver, senang membangun solusi digital dan terus mengeksplorasi teknologi untuk menciptakan aplikasi yang bermanfaat.</p>
+        </section>
+    </main>
+    <div class="tombolatas">
+        <a href="#totop"><button class="backtotop">↑</button></a>
+    </div>
+</body>
+</html>
